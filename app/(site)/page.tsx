@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Auth from './components/Auth';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           Go to Chat!
         </h2>
       </div>
+      <Auth />
     </div>
   );
 }
