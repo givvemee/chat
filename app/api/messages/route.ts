@@ -58,7 +58,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(newMessage);
   } catch (error: any) {
-    console.log(error, '에러가 발생했어요.');
+    console.log(error, '에러_메시지');
     return new NextResponse('InternalError', { status: 500 });
   }
 }

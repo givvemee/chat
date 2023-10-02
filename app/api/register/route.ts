@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(user);
   } catch (error: any) {
-    console.log('REGISTRAION ERROR', error);
+    console.log(error, '에러_가입');
     return new NextResponse('Internal Error', {
       status: 500,
     });

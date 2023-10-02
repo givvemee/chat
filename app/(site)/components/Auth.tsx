@@ -104,7 +104,7 @@ const Auth = () => {
           {variant === 'REGISTER' && (
             <Input
               id="name"
-              label="Name"
+              label="이름"
               register={register}
               errors={errors}
               disabled={isLoading}
@@ -112,7 +112,7 @@ const Auth = () => {
           )}
           <Input
             id="email"
-            label="Email address"
+            label="email"
             type="email"
             register={register}
             errors={errors}
@@ -120,7 +120,7 @@ const Auth = () => {
           />
           <Input
             id="password"
-            label="Password"
+            label="password"
             type="password"
             register={register}
             errors={errors}
