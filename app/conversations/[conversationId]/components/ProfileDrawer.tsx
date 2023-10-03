@@ -2,6 +2,7 @@
 
 import Avatar from '@/app/components/Avatar';
 import AvatarGroup from '@/app/components/AvatarGroup';
+import useActiveList from '@/app/hooks/useActiveList';
 import useOtherUser from '@/app/hooks/useOtherUser';
 import { Dialog, Transition } from '@headlessui/react';
 import { Conversation, User } from '@prisma/client';
@@ -24,6 +25,8 @@ const ProfileDrawer: React.FC<PropfileDrawerProps> = ({
 }) => {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const otherUser = useOtherUser(data);
+  const { members } = useActiveList();
+  const isActive = members.indexOf(otherUser?.email!) !== -1;
   const joinedDate = useMemo(() => {
     return format(new Date(otherUser.createdAt), 'PP');
   }, [otherUser.createdAt]);
@@ -36,7 +39,7 @@ const ProfileDrawer: React.FC<PropfileDrawerProps> = ({
     if (data.isGroup) {
       return `${data.users.length} 명의 대화 상대`;
     }
-    return '접속 중';
+    return isActive ? '접속 중' : '접속 중이 아닙니다.';
   }, [data]);
 
   return (
