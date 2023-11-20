@@ -8,6 +8,7 @@
 - **프로젝트 개요** Next 의 내장 기능 등을 이용하여 실시간 채팅을 구현한 웹 애플리케이션
 
 <br/>
+
 #### 🛠 STACKS
 
 **주요 사용 기술**
@@ -31,6 +32,7 @@
 ```
 
 <br />
+
 #### 🖥 PREVIEW
 
 <a href="https://chat-seven-red.vercel.app/" target="_blank">Vercel Preview Link </a>
